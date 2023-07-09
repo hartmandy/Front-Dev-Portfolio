@@ -2,3 +2,85 @@ body {
   font-family: rubik;
   background-color: #f8f8f8;
 }
+
+h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: -0.5px;
+}
+
+h3,
+h4 {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@keyframes wobble {
+  0% {
+    border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
+  }
+  50% {
+    border-radius: 750px 250px 750px 250px / 250px 750px 250px 750px;
+  }
+  100% {
+    border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
+  }
+}
+
+.avatar-wobble {
+  animation: wobble 8s ease-in-out alternate infinite;
+}
+
+.container {
+  max-width: 1000px;
+  justify-content: center;
+}
+
+.contact {
+  border: 1px solid black;
+  padding: 40px;
+}
+
+.icon-space {
+  margin-right: 20px;
+}
+
+.photo {
+  display: flex;
+}
+
+.photo img {
+  margin-left: auto;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  margin: 0 1em;
+}
+
+@media (min-width: 576px) {
+  section {
+    margin: 0 2em;
+  }
+}
+
+@media (min-width: 800px) {
+  section {
+    margin: 0 5em;
+  }
+}
+
+/* @media (max-width: 576px) {
+  .hero {
+    margin-top: 40px;
+  }
+} */
