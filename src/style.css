@@ -1,6 +1,6 @@
 body {
   font-family: rubik;
-  background-color: #f8f8f8;
+  background-color: #ffede3;
 }
 
 h1 {
@@ -19,6 +19,22 @@ h4 {
   line-height: 1.5;
 }
 
+section {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 767px) {
+  section {
+    margin-bottom: 2em;
+  }
+}
+
+/* HERO SECTION */
+
+.avatar-wobble {
+  animation: wobble 8s ease-in-out alternate infinite;
+}
+
 @keyframes wobble {
   0% {
     border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
@@ -31,30 +47,12 @@ h4 {
   }
 }
 
-.avatar-wobble {
-  animation: wobble 8s ease-in-out alternate infinite;
-}
-
-.container {
-  max-width: 1000px;
-  justify-content: center;
-}
-
-.contact {
-  border: 1px solid black;
-  padding: 40px;
-}
-
-.icon-space {
-  margin-right: 20px;
-}
-
 .photo {
   display: flex;
 }
 
 .photo img {
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .headline {
@@ -63,24 +61,86 @@ h4 {
   justify-content: center;
 }
 
-section {
-  margin: 0 1em;
+.hero {
+  flex-direction: column-reverse;
+  margin-top: 100px;
+  gap: 1em;
 }
 
-@media (min-width: 576px) {
-  section {
-    margin: 0 2em;
+.headline-text {
+  margin: 0 auto;
+}
+
+.email-button {
+  display: flex;
+  justify-content: right;
+}
+
+@media (min-width: 767px) {
+  .hero {
+    flex-direction: row;
+    gap: 0;
+  }
+  .photo img {
+    margin: 0;
+    margin-left: auto;
+  }
+  .headline-text {
+    margin: 0;
+  }
+  .page-border {
+    padding: 2em;
   }
 }
 
 @media (min-width: 800px) {
-  section {
-    margin: 0 5em;
+  .hero {
   }
 }
 
-/* @media (max-width: 576px) {
-  .hero {
-    margin-top: 40px;
+/* CONTACT SECTION */
+
+.page-border {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-space {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.socials {
+  flex-direction: column;
+  gap: 1em;
+}
+.email-button {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 767px) {
+  .page-border {
+    padding: 2em;
   }
-} */
+  .icons {
+    justify-content: start;
+  }
+  .socials {
+    flex-direction: row;
+    gap: 0;
+  }
+  .email-button {
+    width: fit-content;
+  }
+  .button-container {
+    display: flex;
+    justify-content: right;
+  }
+}
