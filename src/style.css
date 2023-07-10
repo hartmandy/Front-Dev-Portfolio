@@ -173,48 +173,49 @@ svg {
 /* PROJECTS GRID */
 .grid {
   height: 100vh;
-  place-items: center;
   display: grid;
   gap: 5px;
   width: 100%;
 }
 
-.grid img {
+.image-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.main-image,
+.hover-image {
+  position: absolute;
   width: 100%;
   height: auto;
   object-fit: contain;
+  transition: opacity 0.3s ease;
 }
 
-@media (min-width: 420px) {
+.hover-image {
+  opacity: 0;
+}
+
+.image-wrapper:hover .hover-image {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
-  .grid img {
+  .image-wrapper img {
     height: 100%;
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 360px);
+    grid-template-columns: repeat(3, 1fr);
   }
-  .grid img {
-    &:nth-of-type(2) {
-      grid-column: 2 / span 2;
-    }
-    &:nth-of-type(3) {
-      grid-column: 4 / 4;
-      grid-row: 1 / span 3;
-    }
-    &:nth-of-type(4) {
-      grid-column: 1 / 1;
-      grid-row: 2 / span 2;
-    }
-    &:nth-of-type(6) {
-      grid-column: 3/3;
-      grid-row: 2 / span 2;
-    }
+  .image-wrapper img {
+    height: 100%;
   }
 }
 
