@@ -177,27 +177,29 @@ svg {
 /* PROJECTS GRID */
 .grid {
   display: grid;
-  gap: 5px;
-  width: 100%;
+  gap: 1em;
+  grid-template-columns: 1fr;
 }
 
 .image-wrapper {
   position: relative;
-  max-height: 400px;
   width: 100%;
+  max-height: 500px;
 }
 
-@media (min-width: 767px) {
-  .image-wrapper {
-    max-height: 300px;
-  }
+.image-wrapper::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 .main-image,
 .hover-image {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   transition: opacity 0.3s ease;
 }
@@ -210,21 +212,15 @@ svg {
   opacity: 1;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
-  }
-  .image-wrapper img {
-    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .image-wrapper img {
-    height: 100%;
   }
 }
 
