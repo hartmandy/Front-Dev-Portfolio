@@ -1,5 +1,5 @@
 html {
-  background-color: ffede3;
+  background-color: white;
 }
 body {
   font-family: rubik;
@@ -20,6 +20,10 @@ h3,
 h4 {
   font-weight: 300;
   line-height: 1.5;
+}
+
+p {
+  font-weight: 300;
 }
 
 section {
@@ -180,7 +184,7 @@ svg {
 
 .image-wrapper {
   position: relative;
-  height: 100%;
+  max-height: 426.66px;
   width: 100%;
 }
 
@@ -269,4 +273,30 @@ svg {
 
 a {
   color: #000;
+}
+
+/* ABOUT PAGE */
+.bio {
+  margin-top: 100px;
+}
+
+.portrait {
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+.bio {
+  margin-bottom: 90px;
 }
