@@ -176,7 +176,6 @@ svg {
 
 /* PROJECTS GRID */
 .grid {
-  height: 100vh;
   display: grid;
   gap: 5px;
   width: 100%;
@@ -184,8 +183,14 @@ svg {
 
 .image-wrapper {
   position: relative;
-  max-height: 426.66px;
+  max-height: 400px;
   width: 100%;
+}
+
+@media (min-width: 767px) {
+  .image-wrapper {
+    max-height: 300px;
+  }
 }
 
 .main-image,
