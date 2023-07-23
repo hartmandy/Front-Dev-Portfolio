@@ -6,6 +6,13 @@ body {
   background-color: #ffede3;
 }
 
+body,
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 h1 {
   color: #000;
   font-family: Rubik;
@@ -296,6 +303,7 @@ footer {
   position: relative;
   width: 100%;
   bottom: 0;
+  margin-top: auto;
 }
 
 .bio {
